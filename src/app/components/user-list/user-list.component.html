@@ -1,0 +1,13 @@
+<!-- src/app/components/user-list/user-list.component.html -->
+<div *ngIf="users.length > 0; else noUsers">
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.uname }} ({{ user.email }})
+    </li>
+  </ul>
+</div>
+
+<ng-template #noUsers>
+  <p>No users found.</p>
+</ng-template>
